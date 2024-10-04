@@ -1,3 +1,4 @@
+// src/CubeProvider.js
 import React, { createContext, useContext } from "react";
 import cubejs from "@cubejs-client/core";
 

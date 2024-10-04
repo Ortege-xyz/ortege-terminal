@@ -1,66 +1,65 @@
-## Available Scripts
+This sample React application demonstrates how to use the Ortege REST API to fetch and display data in interactive tables. The application showcases the following queries:
 
-In the project directory, you can run:
+* Stacked STX by Cycle and Type
+* Stacks Contract Calls Filtered by Zest Protocol Contract Address
+* Stacks DApps TVL and Market Cap
 
-### `npm start`
+# Prerequisites
+* Node.js (version 14 or higher)
+* npm (version 6 or higher)
+* Ortege JWT Token with the necessary permissions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Getting Started
+## Installation
+Clone the Repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+git clone https://github.com/Ortege-xyz/ortege-terminal.git
+cd ortege-terminal
+```
 
-### `npm test`
+Install Dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm install`
 
-### `npm run build`
+## Configuration
+Set Up Environment Variables
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Create a .env file in the root directory of the project. This file will store your Ortege API credentials and should not be committed to version control.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+.env
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+ORTEGE_API_URL=https://api-staging.ortege.ai
+ORTEGE_TOKEN=your_jwt_token_here
+```
 
-### `npm run eject`
+Replace `your_jwt_token_here` with your actual Ortege JWT token.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Running the Application
+Start the application in development mode:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Open http://localhost:3000 to view it in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Project Structure
+```
+├── src
+│   ├── components
+│   │   ├── ContractCallsTable.js
+│   │   ├── DappsTvlMarketCapTable.js
+│   │   └── StackedStxTable.js
+│   ├── CubeProvider.js
+│   ├── queries.js
+│   └── App.js
+├── .env
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
+```
+* src/components: Contains React components for each interactive table.
+* CubeProvider.js: Initializes the Cube.js client using the REST API and provides it via React Context.
+* queries.js: Stores all Ortege queries separately.
+* App.js: Main application file that renders the components.
