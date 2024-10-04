@@ -51,4 +51,20 @@ export const stackedStxByCycleAndType = {
       },
     ],
   };
-  
+
+// Function to generate the query for a given contract ID
+export const getContractCallsQuery = (contractId) => ({
+  measures: ["stacks_contract_calls.asset_amount"],
+  timeDimensions: [],
+  dimensions: [
+    "stacks_contract_calls.function_name",
+    "stacks_contract_calls.event_type",
+  ],
+  filters: [
+    {
+      dimension: "stacks_contract_calls.contract_id",
+      operator: "equals",
+      values: [contractId],
+    },
+  ],
+});
