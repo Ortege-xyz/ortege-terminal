@@ -145,7 +145,7 @@ function App() {
             DApps Dashboard
           </Typography>
           <Typography variant="body1">
-            Welcome to the DApps section. Here you can add components related to DApps.
+            Welcome to the DApps section. These figures are sourced from DefiLlama
           </Typography>
           <DapssTvlTable/>
         </TabPanel>
