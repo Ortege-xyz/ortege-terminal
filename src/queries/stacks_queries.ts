@@ -36,7 +36,7 @@ export const stacksDappsTvlAndMarketCap = {
 };
 
 // Function to generate the query for a given contract ID
-export const getContractCallsQuery = (contractId) => ({
+export const getContractCallsQuery = (contractId: string) => ({
 measures: ["stacks_contract_calls.asset_amount"],
 timeDimensions: [],
 dimensions: [
@@ -51,18 +51,3 @@ filters: [
   },
 ],
 });
-
-// Zest 
-export const zestSupply = {
-  "measures": [
-    "stacks_lending_zest.total_supplied",
-    "stacks_lending_zest.total_borrowed",
-    "stacks_lending_zest.total_repaid",
-    "stacks_lending_zest.total_withdrawn",
-
-  ],
-  "dimensions": [
-    "stacks_lending_zest.sender_address",
-    "stacks_lending_zest.asset_id"
-  ]
-}

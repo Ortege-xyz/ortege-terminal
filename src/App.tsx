@@ -9,6 +9,8 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import ZestSupplyTable from "./components/ZestSupplyTable";
+
 
 // Define the props for TabPanel
 interface TabPanelProps {
@@ -97,7 +99,7 @@ function App() {
           <Typography variant="body1">
             Welcome to the Stacks section. Here you can add components related to Stacks.
           </Typography>
-          {/* Example: <StacksComponent /> */}
+          <ZestSupplyTable/>
         </TabPanel>
       </Box>
     </CubeProvider>
