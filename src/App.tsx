@@ -13,6 +13,7 @@ import ZestSupplyTable from "./components/ZestSupplyTable";
 import PricingTable from "./components/PricingTable";
 import DapssTvlTable from "./components/DappsTvlTable";
 import StellarTransactionsTable from "./components/StellarTransactionsTable";
+import ContractCallsTable from "./components/ContractCallsTable";
 
 // Define the props for TabPanel
 interface TabPanelProps {
@@ -95,8 +96,9 @@ function App() {
             Stacks Dashboard
           </Typography>
           <Typography variant="body1">
-            Welcome to the Stacks section. Here you can add components related to Stacks.
+            Welcome to the Stacks section. Please visit https://docs.ortege.ai to explore our API or else if you'd like to contribute to this completely open source code base please check it out at https://github.com/Ortege-xyz/ortege-terminal.
           </Typography>
+          <ContractCallsTable/>
           <ZestSupplyTable/>
         </TabPanel>
         <TabPanel value={value} index={1}>
