@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build:
@@ -23,6 +23,9 @@ jobs:
 
       - name: Build the app
         run: CI=false npm run build  # Ensure this matches your build script
+        env:
+          REACT_APP_CUBE_API_URL: ${{ secrets.CUBE_API_URL }}  # Pass the CUBE_API_URL from GitHub Secrets
+          REACT_APP_CUBE_TOKEN: ${{ secrets.CUBE_TOKEN }}  # Pass the CUBE_TOKEN from GitHub Secrets
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -31,4 +34,4 @@ jobs:
           publish_dir: ./build  # This is the directory with the compiled app
 
     permissions:
-        contents: write 
+        contents: write
