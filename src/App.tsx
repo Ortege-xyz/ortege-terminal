@@ -79,8 +79,8 @@ function App() {
             allowScrollButtonsMobile
             centered={!isSmallScreen}
           >
-            <Tab label="Stellar" {...a11yProps(0)} />
-            <Tab label="Stacks" {...a11yProps(1)} />
+            <Tab label="Stacks" {...a11yProps(0)} />
+            <Tab label="Stellar" {...a11yProps(1)} />
             <Tab label="Movement" {...a11yProps(2)} />
             <Tab label="Bitcoin" {...a11yProps(3)} />
             <Tab label="Pricing" {...a11yProps(4)} />
@@ -90,16 +90,6 @@ function App() {
 
         {/* Tab Panels */}
         <TabPanel value={value} index={0}>
-          {/* Stellar Content */}
-          <Typography variant="h5" gutterBottom>
-            Stellar Dashboard
-          </Typography>
-          <Typography variant="body1">
-            Welcome to the Stellar section. Here you can add components related to Stellar.
-          </Typography>
-          <StellarTransactionsTable/>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
           {/* Stacks Content */}
           <Typography variant="h5" gutterBottom>
             Stacks Dashboard
@@ -108,6 +98,16 @@ function App() {
             Welcome to the Stacks section. Here you can add components related to Stacks.
           </Typography>
           <ZestSupplyTable/>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          {/* Stellar Content */}
+          <Typography variant="h5" gutterBottom>
+            Stellar Dashboard
+          </Typography>
+          <Typography variant="body1">
+            Welcome to the Stellar section. Here you can add components related to Stellar.
+          </Typography>
+          <StellarTransactionsTable/>
         </TabPanel>
         <TabPanel value={value} index={2}>
           {/* Movement Content */}
