@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useCube } from "../CubeProvider";
-import { stackedStxByCycleAndType } from "../queries";
+import { stackedStxByCycleAndType } from "../queries/stacks_queries";
+
 import { DataGrid } from "@mui/x-data-grid";
 
 const StackedStxTable = () => {

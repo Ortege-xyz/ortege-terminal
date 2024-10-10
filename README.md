@@ -1,8 +1,4 @@
-This sample React application demonstrates how to use the Ortege REST API to fetch and display data in interactive tables. The application showcases the following queries:
-
-* Stacked STX by Cycle and Type
-* Stacks Contract Calls Filtered by Zest Protocol Contract Address
-* Stacks DApps TVL and Market Cap
+This sample React application demonstrates how to use the Ortege REST API to fetch and display data in interactive tables. 
 
 # Prerequisites
 * Node.js (version 14 or higher)

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCube } from "../CubeProvider";
-import { stacksDappsTvlAndMarketCap } from "../queries";
+import { stacksDappsTvlAndMarketCap } from "../queries/stacks_queries";
 import { DataGrid } from "@mui/x-data-grid";
 
 const DappsTvlMarketCapTable = () => {

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useCube } from "../CubeProvider";
-import { getContractCallsQuery } from "../queries";
+import { getContractCallsQuery } from "../queries/stacks_queries";
 import { DataGrid } from "@mui/x-data-grid";
 
 const ContractCallsTable = () => {
