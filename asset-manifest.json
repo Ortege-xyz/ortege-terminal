@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ortege-terminal/static/css/main.e6c13ad2.css",
-    "main.js": "/ortege-terminal/static/js/main.676032e9.js",
+    "main.js": "/ortege-terminal/static/js/main.04020f78.js",
     "static/js/453.7332a82f.chunk.js": "/ortege-terminal/static/js/453.7332a82f.chunk.js",
     "index.html": "/ortege-terminal/index.html",
     "main.e6c13ad2.css.map": "/ortege-terminal/static/css/main.e6c13ad2.css.map",
-    "main.676032e9.js.map": "/ortege-terminal/static/js/main.676032e9.js.map",
+    "main.04020f78.js.map": "/ortege-terminal/static/js/main.04020f78.js.map",
     "453.7332a82f.chunk.js.map": "/ortege-terminal/static/js/453.7332a82f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.676032e9.js"
+    "static/js/main.04020f78.js"
   ]
 }
